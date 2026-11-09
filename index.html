@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaning Fairy LTD | Professional Cleaning Services in Calgary and Airdrie</title>
+<meta name="description" content="Top-rated, locally owned family cleaning company serving Calgary & Airdrie. Fully insured, trained employees, recurring cleaning from $49/cleaner-hour.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#1d0b38; --plum-2:#2a1150; --violet:#4b1a8f; --violet-2:#6a2fc0;
+  --pink:#f2419f; --pink-2:#ff6bb8; --blush:#ffe3f1; --lav:#f6f0ff; --cream:#fffaf6;
+  --ink:#1b1426; --muted:#6c6178; --line:#e9e1f3;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Onest',system-ui,sans-serif; --accent:'Instrument Serif',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.02em}
+em.f{font-family:var(--accent);font-style:italic;font-weight:400;letter-spacing:0}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.98rem;padding:.95rem 1.5rem;border-radius:100px;transition:.25s;cursor:pointer;border:0;font-family:var(--body)}
+.btn-pink{background:var(--pink);color:#fff;box-shadow:0 10px 30px -10px rgba(242,65,159,.7)}
+.btn-pink:hover{background:#e02c8c;transform:translateY(-2px)}
+.btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-dark{background:var(--plum);color:#fff}
+.btn-dark:hover{background:var(--violet)}
+.tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
+.tag::before{content:"";width:22px;height:2px;background:currentColor}
+
+/* top bar + nav */
+.topbar{background:var(--pink);color:#fff;font-size:.84rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.topbar span{display:inline-flex;gap:.45rem;align-items:center}
+.topbar .r{display:flex;gap:1.5rem}
+header.nav{background:var(--plum);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.07)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo img{height:68px;width:auto}
+nav.menu{display:flex;gap:2rem;color:#ddd0f0;font-size:.95rem;font-weight:500}
+nav.menu a:hover{color:var(--pink-2)}
+.nav-cta{display:flex;gap:1rem;align-items:center}
+.nav-cta .ph{color:#fff;font-weight:600;font-size:.95rem}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.7rem}
+
+/* hero */
+.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden;padding:4.5rem 0 0}
+.hero .dust{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1.5px),radial-gradient(circle,rgba(255,107,184,.5) 1px,transparent 1.5px);background-size:120px 120px,190px 190px;background-position:0 0,60px 90px;opacity:.35;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:2rem;align-items:end;position:relative}
+.hero-copy{padding-bottom:4.5rem}
+.hero .eyebrow{display:inline-flex;gap:.6rem;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:.45rem 1rem .45rem .5rem;border-radius:100px;font-size:.88rem;color:#e9def9}
+.eyebrow b{background:var(--pink);color:#fff;border-radius:100px;padding:.15rem .6rem;font-size:.75rem;letter-spacing:.06em}
+.hero h1{font-size:clamp(2.5rem,5vw,4.4rem);font-weight:800;margin:1.4rem 0 1.3rem}
+.hero h1 em.f{color:var(--pink-2);font-size:1.08em}
+.hero p.lead{font-size:1.15rem;color:#cfc2e4;max-width:540px}
+.hero .ctas{display:flex;gap:.9rem;margin-top:2rem;flex-wrap:wrap}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.2rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.12)}
+.trust h4{font-family:var(--display);font-size:1.02rem;font-weight:700;display:flex;gap:.5rem;align-items:center}
+.trust h4 .ic{width:30px;height:30px;border-radius:9px;background:rgba(242,65,159,.16);display:grid;place-items:center;color:var(--pink-2);font-size:.95rem}
+.trust p{font-size:.86rem;color:#b9abd0;margin-top:.45rem;line-height:1.45}
+.hero-visual{position:relative;height:100%;min-height:560px;display:flex;align-items:flex-end;justify-content:center}
+.glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ff5fb2 0%,#c2307f 38%,rgba(75,26,143,.0) 70%);bottom:-60px;left:50%;transform:translateX(-50%)}
+.ring{position:absolute;width:520px;height:520px;border:1.5px dashed rgba(255,255,255,.25);border-radius:50%;bottom:20px;left:50%;transform:translateX(-50%);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+.hero-visual img.cut{position:relative;width:min(640px,112%);max-width:none;z-index:2}
+.float{position:absolute;z-index:3;background:#fff;color:var(--ink);border-radius:18px;padding:.85rem 1.1rem;box-shadow:0 20px 50px -20px rgba(0,0,0,.5);font-size:.85rem}
+.float.q{left:-80px;bottom:150px;display:flex;gap:.7rem;align-items:center;max-width:250px}
+.float.q .t{width:42px;height:42px;border-radius:12px;background:var(--blush);display:grid;place-items:center;font-size:1.2rem;flex:none}
+.float.q b{display:block;font-family:var(--display);font-size:.98rem;line-height:1.2}
+.float.p{right:0;bottom:120px;background:var(--violet);color:#fff;text-align:center}
+.float.p small{display:block;opacity:.75;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.float.p strong{font-family:var(--display);font-size:2rem;line-height:1}
+
+/* services menu */
+.services{padding:7rem 0 6rem;background:var(--cream)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+.svc-head h2{font-size:clamp(2.2rem,4vw,3.4rem);max-width:640px;margin-top:.8rem}
+.svc-head p{max-width:380px;color:var(--muted)}
+.svc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:start}
+.svc-preview{position:sticky;top:110px;border-radius:30px;overflow:hidden;aspect-ratio:4/4.6;background:var(--lav)}
+.svc-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s,transform .8s;transform:scale(1.06)}
+.svc-preview img.on{opacity:1;transform:scale(1)}
+.svc-preview .lbl{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(29,11,56,.82);backdrop-filter:blur(6px);color:#fff;padding:.6rem 1rem;border-radius:14px;font-size:.85rem}
+.svc-list{list-style:none;border-top:1px solid var(--line)}
+.svc-list li{border-bottom:1px solid var(--line)}
+.svc-list a{display:grid;grid-template-columns:52px 1fr auto 38px;gap:1rem;align-items:center;padding:1.45rem .4rem;transition:.25s}
+.svc-list .n{font-family:var(--display);color:#b9a8d3;font-weight:700;font-size:.95rem}
+.svc-list h3{font-size:1.55rem;font-weight:700}
+.svc-list small{display:block;color:var(--muted);font-size:.88rem;margin-top:.15rem}
+.svc-list .pr{font-family:var(--display);font-weight:700;color:var(--violet);text-align:right;font-size:1.05rem;white-space:nowrap}
+.svc-list .pr span{display:block;font-family:var(--body);font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.svc-list .ar{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:.25s;color:var(--violet)}
+.svc-list li:hover a,.svc-list li.active a{background:linear-gradient(90deg,var(--blush),transparent);padding-left:1.1rem}
+.svc-list li:hover .ar,.svc-list li.active .ar{background:var(--pink);border-color:var(--pink);color:#fff;transform:rotate(-45deg)}
+.svc-note{display:flex;gap:1rem;align-items:center;justify-content:space-between;margin-top:1.8rem;flex-wrap:wrap}
+.svc-note p{font-size:.88rem;color:var(--muted);max-width:430px}
+
+/* offers bento */
+.offers{padding:0 0 7rem}
+.bento{display:grid;grid-template-columns:1fr 1.25fr;gap:1.4rem}
+.ticket{background:var(--pink);color:#fff;border-radius:28px;padding:2.6rem;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;min-height:420px}
+.ticket .perf{position:relative;display:block;margin:1.6rem -2.6rem;border-top:2px dashed rgba(255,255,255,.45)}
+.ticket .perf::before,.ticket .perf::after{content:"";position:absolute;width:44px;height:44px;border-radius:50%;background:var(--cream);top:-23px}
+.ticket .perf::before{left:-22px}.ticket .perf::after{right:-22px}
+.ticket h3{font-size:1.9rem;font-weight:800;max-width:300px}
+.ticket .price{display:flex;align-items:baseline;gap:.8rem;margin-top:1rem}
+.ticket .price strong{font-family:var(--display);font-size:4.6rem;line-height:1;font-weight:800}
+.ticket .price s{opacity:.7;font-size:1.3rem}
+.ticket p{color:#ffe6f3;max-width:330px;font-size:.95rem}
+.ticket .btn{background:#fff;color:var(--pink);align-self:flex-start;margin-top:1.4rem}
+.ticket .stamp{position:absolute;right:28px;top:28px;width:96px;height:96px;border-radius:50%;border:2px solid rgba(255,255,255,.6);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:700;font-size:.78rem;line-height:1.15;transform:rotate(12deg)}
+.bbq{border-radius:28px;overflow:hidden;position:relative;min-height:420px;color:#fff;display:flex;align-items:flex-end}
+.bbq img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bbq::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(29,11,56,0) 30%,rgba(29,11,56,.92) 82%)}
+.bbq .in{position:relative;z-index:2;padding:2.4rem;max-width:520px}
+.bbq .tag{color:var(--pink-2)}
+.bbq h3{font-size:2.2rem;font-weight:800;margin:.6rem 0 .7rem}
+.bbq p{color:#ddd0ef}
+.bbq .row{display:flex;gap:.8rem;margin-top:1.4rem;flex-wrap:wrap}
+
+/* before after */
+.ba{background:var(--plum-2);color:#fff;padding:7rem 0;position:relative;overflow:hidden}
+.ba-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:center}
+.ba h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:.8rem 0 1.2rem}
+.ba h2 em.f{color:var(--pink-2)}
+.ba p{color:#c7b9de;max-width:420px}
+.ba-tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.ba-tabs button{background:rgba(255,255,255,.06);color:#e5dbf5;border:1px solid rgba(255,255,255,.15);padding:.6rem 1.1rem;border-radius:100px;font-family:var(--body);font-size:.9rem;cursor:pointer;transition:.2s}
+.ba-tabs button.on{background:var(--pink);border-color:var(--pink);color:#fff}
+.compare{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3;user-select:none;box-shadow:0 40px 80px -40px rgba(0,0,0,.7);transform:rotate(-1.5deg);border:8px solid #fff}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .after{clip-path:inset(0 0 0 50%)}
+.compare .bar{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.compare .knob{position:absolute;top:50%;left:50%;width:54px;height:54px;border-radius:50%;background:var(--pink);transform:translate(-50%,-50%);display:grid;place-items:center;color:#fff;font-weight:700;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.compare .tb,.compare .ta{position:absolute;top:16px;z-index:2;font-size:.72rem;font-weight:700;letter-spacing:.12em;padding:.35rem .7rem;border-radius:8px}
+.compare .tb{left:16px;background:var(--plum);color:#fff}.compare .ta{right:16px;background:var(--pink);color:#fff}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:3}
+
+/* about */
+.about{padding:7rem 0;background:var(--lav)}
+.about-top{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.about h2{font-size:clamp(2.4rem,4.6vw,4rem)}
+.about h2 em.f{color:var(--pink)}
+.about-top p{color:var(--muted);font-size:1.05rem}
+.team-stage{margin-top:3rem;position:relative;border-radius:36px;background:linear-gradient(135deg,var(--violet) 0%,#7b2bb5 55%,var(--pink) 120%);overflow:hidden;padding:3rem 2rem 0;display:grid;grid-template-columns:1.3fr .7fr;align-items:end;gap:2rem}
+.team-stage img{width:100%;position:relative;z-index:1}
+.team-stage .sparkle{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.5) 1px,transparent 1.6px);background-size:70px 70px;opacity:.4}
+.stats{position:relative;z-index:2;display:flex;flex-direction:column;gap:1rem;padding-bottom:3rem;color:#fff}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);border-radius:20px;padding:1.2rem 1.4rem}
+.stat strong{font-family:var(--display);font-size:2.4rem;font-weight:800;line-height:1;display:block}
+.stat span{font-size:.9rem;color:#f0e6ff}
+.about-foot{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.4rem}
+.chip{background:#fff;border-radius:18px;padding:1.2rem 1.3rem;font-size:.92rem;border:1px solid var(--line)}
+.chip b{display:block;font-family:var(--display);font-size:1.05rem;margin-bottom:.2rem;color:var(--violet)}
+.about-cta{display:flex;justify-content:center;margin-top:2.4rem}
+
+/* how */
+.how{padding:7rem 0;background:var(--cream)}
+.how-head{text-align:center;max-width:640px;margin:0 auto 4rem}
+.how-head h2{font-size:clamp(2.2rem,4vw,3.4rem);margin-top:.8rem}
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative}
+.path::before{content:"";position:absolute;top:44px;left:8%;right:8%;border-top:2px dashed #d9c6ef}
+.step{position:relative;text-align:left}
+.step .num{width:88px;height:88px;border-radius:26px;background:#fff;border:1.5px solid var(--line);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:2rem;color:var(--violet);position:relative;z-index:1;margin-bottom:1.6rem;transition:.3s}
+.step:nth-child(even) .num{border-radius:50%}
+.step:hover .num{background:var(--pink);color:#fff;border-color:var(--pink);transform:rotate(-6deg)}
+.step h3{font-size:1.35rem;margin-bottom:.5rem}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* reviews */
+.reviews{padding:7rem 0;background:var(--blush);position:relative}
+.rev-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+.rev-head h2{font-size:clamp(2.2rem,4vw,3.4rem);margin-top:.8rem}
+.gbadge{display:flex;align-items:center;gap:.8rem;background:#fff;border-radius:16px;padding:.8rem 1.2rem;font-size:.9rem}
+.gbadge .stars{color:#f5a623;letter-spacing:2px}
+.masonry{columns:3;column-gap:1.3rem}
+.rev{break-inside:avoid;background:#fff;border-radius:22px;padding:1.7rem;margin-bottom:1.3rem;border:1px solid #f6cfe3}
+.rev:nth-child(3n+2){background:var(--plum);color:#fff;border-color:var(--plum)}
+.rev:nth-child(3n+2) .who small{color:#b9abd0}
+.rev .stars{color:#f5a623;letter-spacing:2px;font-size:.9rem}
+.rev blockquote{font-size:1.06rem;margin:.8rem 0 1.2rem;line-height:1.5}
+.rev.big blockquote{font-family:var(--display);font-size:1.45rem;line-height:1.25;font-weight:600}
+.who{display:flex;align-items:center;gap:.7rem}
+.who .av{width:40px;height:40px;border-radius:12px;background:var(--pink);color:#fff;display:grid;place-items:center;font-weight:700;font-family:var(--display)}
+.who b{display:block;font-size:.95rem}
+.who small{color:var(--muted);font-size:.8rem}
+
+/* faq */
+.faq{padding:7rem 0;background:var(--cream)}
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:4rem;align-items:start}
+.faq h2{font-size:clamp(2.2rem,4vw,3.2rem);margin:.8rem 0 1.4rem}
+.owner-card{margin-top:2rem;border-radius:26px;overflow:hidden;background:var(--plum);color:#fff;display:grid;grid-template-columns:130px 1fr}
+.owner-card img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.owner-card div{padding:1.4rem}
+.owner-card b{font-family:var(--display);font-size:1.15rem;display:block;margin-bottom:.4rem}
+.owner-card a{display:block;color:var(--pink-2);font-weight:600;font-size:.95rem}
+.owner-card small{color:#b9abd0;font-size:.8rem}
+details{border-bottom:1px solid var(--line);padding:1.3rem 0}
+details summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;font-family:var(--display);font-weight:700;font-size:1.15rem}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--lav);color:var(--violet);display:grid;place-items:center;font-size:1.2rem;transition:.25s}
+details[open] summary::after{transform:rotate(45deg);background:var(--pink);color:#fff}
+details p{color:var(--muted);margin-top:.8rem;max-width:620px}
+
+/* contact band */
+.contact{padding:0 0 7rem;background:var(--cream)}
+.cbox{border-radius:36px;background:var(--violet);color:#fff;padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;overflow:hidden}
+.cbox::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(242,65,159,.7),transparent 65%);right:-120px;top:-160px}
+.cbox h2{font-size:clamp(2.2rem,4vw,3.4rem);position:relative}
+.cbox p{color:#dccff2;margin-top:1rem;position:relative}
+.cbox .callme{display:inline-flex;gap:.6rem;margin-top:1.6rem;font-family:var(--display);font-size:1.6rem;font-weight:700;position:relative}
+form.qf{position:relative;background:#fff;border-radius:24px;padding:1.8rem;display:grid;gap:.8rem;color:var(--ink)}
+form.qf label{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+form.qf input{width:100%;margin-top:.3rem;padding:.9rem 1rem;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:1rem;background:var(--cream)}
+form.qf input:focus{outline:0;border-color:var(--pink)}
+form.qf .btn{justify-content:center;margin-top:.4rem}
+
+/* footer */
+footer{background:var(--plum);color:#c7b9de;padding:5rem 0 2rem;font-size:.93rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2.5rem}
+footer .logo img{height:70px}
+footer h5{font-family:var(--display);color:#fff;font-size:1.05rem;margin-bottom:1rem}
+footer ul{list-style:none;display:grid;gap:.55rem}
+footer a:hover{color:var(--pink-2)}
+.fbot{margin-top:4rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem}
+.fbot a{color:#fff}
+.fbot .credit a{color:var(--pink-2);font-weight:600}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:1080px){
+  nav.menu{display:none}.burger{display:block}
+  nav.menu.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--plum);padding:1.5rem 4%;gap:1rem}
+  .nav-cta .ph{display:none}
+  .hero-grid,.svc-grid,.ba-grid,.about-top,.faq-grid,.cbox,.bento{grid-template-columns:1fr}
+  .hero-copy{padding-bottom:0}.hero-visual{min-height:480px}
+  .svc-preview{position:relative;top:0;aspect-ratio:16/10}
+  .team-stage{grid-template-columns:1fr}.stats{flex-direction:row;flex-wrap:wrap;padding-bottom:2rem}.stat{flex:1 1 180px}
+  .about-foot{grid-template-columns:1fr 1fr}
+  .path{grid-template-columns:1fr 1fr;row-gap:3rem}.path::before{display:none}
+  .masonry{columns:2}.fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .ticket .perf{margin:1.4rem -2rem}.hero-visual img.cut{width:100%}.float.q{bottom:auto}
+  .topbar .r span:last-child{display:none}
+  .trust{grid-template-columns:1fr}.float.q{left:0;top:20px;bottom:auto}.glow{width:380px;height:380px}.ring{width:320px;height:320px}
+  .svc-list a{grid-template-columns:36px 1fr 30px}.svc-list .pr{grid-column:2;text-align:left}.svc-list .ar{grid-row:1;grid-column:3}
+  .svc-list h3{font-size:1.3rem}
+  .about-foot,.path,.fgrid{grid-template-columns:1fr}.masonry{columns:1}
+  .cbox{padding:2rem}.ticket,.bbq{min-height:380px}.ticket{padding:2rem}
+  .owner-card{grid-template-columns:100px 1fr}
+  .nav-cta .btn{padding:.7rem 1rem;font-size:.85rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>✦ Mon–Sun, 7:00 AM – 7:00 PM · Calgary &amp; Airdrie</span>
+    <div class="r">
+      <span><a href="tel:+14039994884">(403) 999-4884</a></span>
+      <span><a href="mailto:info@cleaningfairycanada.ca">info@cleaningfairycanada.ca</a></span>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="https://www.cleaningfairycanada.ca"><img src="images/logo.png" alt="Cleaning Fairy"></a>
+    <nav class="menu" id="menu">
+      <a href="https://www.cleaningfairycanada.ca/residential">Residential</a>
+      <a href="https://www.cleaningfairycanada.ca/commercial">Commercial</a>
+      <a href="https://www.cleaningfairycanada.ca/about-us">About us</a>
+      <a href="https://www.cleaningfairycanada.ca/career">Career</a>
+      <a href="https://www.cleaningfairycanada.ca/blog">Blog</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.cleaningfairycanada.ca/contacts">Contacts</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="ph" href="tel:+14039994884">(403) 999-4884</a>
+      <a class="btn btn-pink" href="https://www.cleaningfairycanada.ca/request">Get a quote</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="dust"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><b>LOCAL</b> Top-rated, locally owned family cleaning company</span>
+      <h1>Professional Cleaning Services in <em class="f">Calgary</em> and <em class="f">Airdrie</em></h1>
+      <p class="lead">Fully insured, trained employees and recurring cleaning from $49/cleaner-hour.</p>
+      <div class="ctas">
+        <a class="btn btn-pink" href="https://www.cleaningfairycanada.ca/request">Get a quote →</a>
+        <a class="btn btn-ghost" href="#services">All services</a>
+      </div>
+      <div class="trust">
+        <div><h4><span class="ic">★</span>Google rating 5.0</h4><p>People trust us for reliability, professionalism, and spotless results.</p></div>
+        <div><h4><span class="ic">✓</span>High quality &amp; reliability</h4><p>Stable standards, quality control, modern equipment.</p></div>
+        <div><h4><span class="ic">⌂</span>Calgary &amp; Airdrie</h4><p>A local company you can rely on.</p></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="glow"></div><div class="ring"></div>
+      <img class="cut" src="images/cleaner-duster.webp" alt="Cleaning Fairy cleaner with a pink duster">
+      <div class="float q"><span class="t">⏱</span><span><b>Free quote in 2 minutes</b>Get your free quote in just 2 minutes!</span></div>
+      <div class="float p"><small>Recurring from</small><strong>$49</strong><small>per cleaner-hour</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="tag">Residential cleaning services</span>
+      <h2>Pick your clean. <em class="f">Pay for the time</em> we actually work.</h2></div>
+      <p>Pricing is based on actual time worked, subject to the minimum. Regular, deep, one-time, move-in/move-out, carpet, window and Airbnb.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-preview reveal" id="preview">
+        <img class="on" data-k="0" src="images/service-regular.jpg" alt="Regular home cleaning">
+        <img data-k="1" src="images/service-deep.jpg" alt="Deep cleaning a kitchen">
+        <img data-k="2" src="images/service-one-time.jpg" alt="One-time cleaning">
+        <img data-k="3" src="images/service-move.jpg" alt="Move in and move out cleaning">
+        <img data-k="4" src="images/service-carpet.jpg" alt="Carpet and upholstery cleaning">
+        <img data-k="5" src="images/service-window.jpg" alt="Window cleaning">
+        <img data-k="6" src="images/service-airbnb.jpg" alt="Airbnb cleaning team">
+        <span class="lbl" id="plbl">Regular cleaning</span>
+      </div>
+      <div>
+        <ul class="svc-list" id="svcList">
+          <li class="active" data-k="0"><a href="https://www.cleaningfairycanada.ca/regular"><span class="n">01</span><span><h3>Regular cleaning</h3><small>Weekly, bi-weekly or monthly</small></span><span class="pr"><span>from</span>$49/hour</span><span class="ar">→</span></a></li>
+          <li data-k="1"><a href="https://www.cleaningfairycanada.ca/deep-cleaning"><span class="n">02</span><span><h3>Deep cleaning</h3><small>Inside the fridge, oven and closets</small></span><span class="pr"><span>per cleaner-hour</span>$60/hour</span><span class="ar">→</span></a></li>
+          <li data-k="2"><a href="https://www.cleaningfairycanada.ca/one-time"><span class="n">03</span><span><h3>One-time cleaning</h3><small>Spring, holiday and last-minute visits</small></span><span class="pr"><span>min. $196 + GST</span>$60/hour</span><span class="ar">→</span></a></li>
+          <li data-k="3"><a href="https://www.cleaningfairycanada.ca/move-in-move-out"><span class="n">04</span><span><h3>Move in / move out</h3><small>2,000+ move-related cleanings completed</small></span><span class="pr"><span>from</span>$49/hour</span><span class="ar">→</span></a></li>
+          <li data-k="4"><a href="https://www.cleaningfairycanada.ca/carpet-cleaning"><span class="n">05</span><span><h3>Carpet &amp; upholstery</h3><small>Professional carpet and upholstery cleaning</small></span><span class="pr"><span>from</span>$180</span><span class="ar">→</span></a></li>
+          <li data-k="5"><a href="https://www.cleaningfairycanada.ca/window-cleaning"><span class="n">06</span><span><h3>Window cleaning</h3><small>Residential window cleaning</small></span><span class="pr"><span>price</span>On quote</span><span class="ar">→</span></a></li>
+          <li data-k="6"><a href="https://www.cleaningfairycanada.ca/request"><span class="n">07</span><span><h3>Airbnb cleaning</h3><small>Homes, hotels and Airbnb properties</small></span><span class="pr"><span>price</span>On quote</span><span class="ar">→</span></a></li>
+        </ul>
+        <div class="svc-note">
+          <p>Recurring cleaning from $49/cleaner-hour. One-time and deep cleaning $60/cleaner-hour, minimum $196 + GST.</p>
+          <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+            <a class="btn btn-dark" href="https://www.cleaningfairycanada.ca/online-booking">Book a cleaning</a>
+            <a class="btn" style="border:1.5px solid var(--line)" href="https://www.cleaningfairycanada.ca/residential">View all</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offers">
+  <div class="wrap bento">
+    <div class="ticket reveal">
+      <div class="stamp">SPECIAL<br>OFFER</div>
+      <div>
+        <span class="tag" style="color:#fff">Regular cleaning</span>
+        <h3 style="margin-top:.7rem">Special offer on regular cleaning</h3>
+        <div class="price"><strong>$49</strong><s>$60/hour</s></div>
+      </div>
+      <span class="perf"></span>
+      <div>
+        <p>Lock in a lower hourly rate and enjoy a consistently clean home without the hassle.</p>
+        <a class="btn" href="https://www.cleaningfairycanada.ca/online-booking">Book now →</a>
+      </div>
+    </div>
+    <div class="bbq reveal">
+      <img src="images/bbq-cleaning.jpg" alt="BBQ and grill deep cleaning">
+      <div class="in">
+        <span class="tag">Seasonal service</span>
+        <h3>BBQ &amp; Grill Deep Cleaning</h3>
+        <p>Deep cleaning for BBQ grills, smokers, and outdoor cooking equipment.</p>
+        <div class="row">
+          <a class="btn btn-pink" href="https://www.cleaningfairycanada.ca/request-bbq">Book BBQ cleaning</a>
+          <a class="btn btn-ghost" href="https://www.cleaningfairycanada.ca/bbq">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ba">
+  <div class="wrap ba-grid">
+    <div class="reveal">
+      <span class="tag">Before your move-out inspection</span>
+      <h2>The hidden spots <em class="f">matter.</em></h2>
+      <p>Real results from our team. Drag the slider to compare before and after.</p>
+      <div class="ba-tabs" id="baTabs">
+        <button class="on" data-p="oven">Oven</button>
+        <button data-p="fridge">Fridge</button>
+        <button data-p="counter">Countertop</button>
+        <button data-p="sink">Under the sink</button>
+      </div>
+    </div>
+    <div class="compare reveal" id="compare">
+      <img class="before" id="baB" src="images/ba-oven-before.jpg" alt="Before cleaning">
+      <img class="after" id="baA" src="images/ba-oven-after.jpg" alt="After cleaning">
+      <span class="tb">BEFORE</span><span class="ta">AFTER</span>
+      <span class="bar" id="baBar"></span><span class="knob" id="baKnob">⇆</span>
+      <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Before and after slider">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-top reveal">
+      <div><span class="tag">Meet our team</span>
+      <h2 style="margin-top:.8rem">Cleaning Fairy LTD. <em class="f">Founded in Alberta.</em></h2></div>
+      <p>A professional team trained to clean homes, hotels, offices, and Airbnb properties with care and precision. Every cleaner is vetted, trained and legally employed.</p>
+    </div>
+    <div class="team-stage reveal">
+      <span class="sparkle"></span>
+      <img src="images/team-group.webp" alt="The Cleaning Fairy team with their equipment">
+      <div class="stats">
+        <div class="stat"><strong>2500+</strong><span>families served</span></div>
+        <div class="stat"><strong>2,000+</strong><span>move-related cleanings completed</span></div>
+        <div class="stat"><strong>$2M</strong><span>liability insurance and WCB coverage</span></div>
+      </div>
+    </div>
+    <div class="about-foot">
+      <div class="chip"><b>Serving Calgary and Airdrie</b>Hundreds of cleaning projects completed every month</div>
+      <div class="chip"><b>Employees, not contractors</b>Professional insured cleaning teams</div>
+      <div class="chip"><b>Trusted by</b>Homeowners, tenants, realtors and property managers</div>
+      <div class="chip"><b>Family-safe products</b>Suitable for homes with children and pets</div>
+    </div>
+    <div class="about-cta"><a class="btn btn-dark" href="https://www.cleaningfairycanada.ca/about-us">Learn more about us →</a></div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="how-head reveal"><span class="tag">How we work</span><h2>Four steps to a <em class="f">spotless</em> home</h2></div>
+    <div class="path">
+      <div class="step reveal"><div class="num">01</div><h3>Request a quote</h3><p>Send a request or give us a call. We ask a few questions about your space and provide a price estimate before booking.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Cleaner assignment</h3><p>We assign a trained, background-checked cleaner and send you the visit date and time.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Cleaning</h3><p>Our team arrives on time with equipment and completes the service according to your request.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Feedback &amp; payment</h3><p>You review the results and complete the payment. If anything needs attention, tell us and we will make it right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <div><span class="tag">Reviews</span><h2>What do our <em class="f">clients</em> say</h2></div>
+      <div class="gbadge"><b>Google</b><span class="stars">★★★★★</span><span>Five-star reviews</span></div>
+    </div>
+    <div class="masonry">
+      <div class="rev big reveal"><span class="stars">★★★★★</span><blockquote>"They knock it out of the park every time."</blockquote><div class="who"><span class="av">E</span><span><b>El Mundo</b><small>Google review</small></span></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><blockquote>"The team arrived on time, were professional and polite, and did an amazing job cleaning my home."</blockquote><div class="who"><span class="av">R</span><span><b>Roman Plisko</b><small>Google review</small></span></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><blockquote>"Kateryna is the best! She's incredibly thorough, reliable, and takes great pride in her work."</blockquote><div class="who"><span class="av">K</span><span><b>kadra farah</b><small>Google review</small></span></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><blockquote>"The place was spotless, every corner, cabinet, and appliance was perfectly cleaned."</blockquote><div class="who"><span class="av">M</span><span><b>Mykhailo Tsekhanovych</b><small>Google review</small></span></div></div>
+      <div class="rev big reveal"><span class="stars">★★★★★</span><blockquote>"I've never seen our shower sparkle!"</blockquote><div class="who"><span class="av">M</span><span><b>Michelle Narcisse</b><small>Google review</small></span></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><blockquote>"The team is always punctual, professional, and super thorough."</blockquote><div class="who"><span class="av">J</span><span><b>Jn-Mchl H</b><small>Google review</small></span></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><blockquote>"This team provided exceptional service in a very timely and professional fashion."</blockquote><div class="who"><span class="av">A</span><span><b>Amylee Tout</b><small>Google review</small></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="tag">FAQ</span>
+      <h2>Questions, <em class="f">answered</em></h2>
+      <p style="color:var(--muted)">Still unsure? Call or email us, we are open Mon–Sun, 7:00 AM – 7:00 PM.</p>
+      <div class="owner-card">
+        <img src="images/owner.jpg" alt="Cleaning Fairy">
+        <div><b>Talk to us directly</b><a href="tel:+14039994884">(403) 999-4884</a><a href="mailto:info@cleaningfairycanada.ca">info@cleaningfairycanada.ca</a><small>Calgary &amp; Airdrie</small></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <details open><summary>How much does house cleaning cost in Calgary?</summary><p>Recurring cleaning starts from $49/cleaner-hour. One-time and deep cleaning is $60/cleaner-hour with a minimum of $196 + GST. Carpet and upholstery cleaning starts from $180. Pricing is based on actual time worked.</p></details>
+      <details><summary>How long will the cleaning take?</summary><p>It depends on home size, condition and service type. A standard cleaning usually takes a few hours, while deep or move-in/move-out cleaning for larger homes may take a full day.</p></details>
+      <details><summary>Do I need to be home during the cleaning?</summary><p>No. Many clients leave access instructions or a key.</p></details>
+      <details><summary>What is included in a standard cleaning?</summary><p>Kitchens and bathrooms are cleaned and sanitized, surfaces, baseboards and fixtures are dusted, carpets and rugs are vacuumed, floors are mopped and trash is emptied.</p></details>
+      <details><summary>Do you clean inside the fridge, oven, or closets?</summary><p>Yes, as part of a deep cleaning or as an add-on request.</p></details>
+      <details><summary>Can I choose the same cleaner every time?</summary><p>Yes. For recurring cleanings we try to assign the same cleaner or team.</p></details>
+      <details><summary>Do you bring your own supplies and equipment?</summary><p>Yes. Our team arrives with professional products and tools, everything needed is included. Our products are eco-friendly and safe for pets and kids.</p></details>
+      <details><summary>Are your cleaners insured?</summary><p>Yes. We carry $2M liability insurance and WCB coverage, and our cleaners are employees, not independent contractors.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cbox reveal">
+      <div>
+        <h2>Need help with cleaning?</h2>
+        <p>Leave your contact details, we'll call you to discuss your needs.</p>
+        <a class="callme" href="tel:+14039994884">☎ (403) 999-4884</a>
+      </div>
+      <form class="qf" action="https://www.cleaningfairycanada.ca/request" method="get">
+        <label>Name<input type="text" name="name" placeholder="Your name" required></label>
+        <label>Phone number<input type="tel" name="phone" placeholder="(403) 000-0000" required></label>
+        <label>Email<input type="email" name="email" placeholder="you@email.com"></label>
+        <button class="btn btn-pink" type="submit">Get a quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="https://www.cleaningfairycanada.ca"><img src="images/logo.png" alt="Cleaning Fairy"></a>
+        <p style="margin-top:1.2rem;max-width:300px">Top-rated, locally owned family cleaning company serving Calgary &amp; Airdrie.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="https://www.cleaningfairycanada.ca/regular">Regular cleaning</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/deep-cleaning">Deep cleaning</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/move-in-move-out">Move in / move out</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/carpet-cleaning">Carpet &amp; upholstery</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/window-cleaning">Window cleaning</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/commercial">Commercial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="https://www.cleaningfairycanada.ca/about-us">About us</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/contacts">Contacts</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/career">Career</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://www.cleaningfairycanada.ca/gift-certificate">Gift certificates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+14039994884">+1 (403) 999-4884</a></li>
+          <li><a href="mailto:info@cleaningfairycanada.ca">info@cleaningfairycanada.ca</a></li>
+          <li>Mon–Sun, 7:00 AM – 7:00 PM</li>
+          <li>Calgary &amp; Airdrie, Alberta</li>
+        </ul>
+        <a class="btn btn-pink" style="margin-top:1.3rem" href="https://www.cleaningfairycanada.ca/request">Get a quote</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2025-2026 Cleaning Fairy LTD · <a href="https://www.cleaningfairycanada.ca/terms-and-conditions">Terms &amp; conditions</a> · <a href="https://www.cleaningfairycanada.ca/privacy-policy">Privacy policy</a></span>
+      <span class="credit">Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// services hover preview
+const items=document.querySelectorAll('#svcList li'),imgs=document.querySelectorAll('#preview img'),lbl=document.getElementById('plbl');
+items.forEach(li=>li.addEventListener('mouseenter',()=>{
+  items.forEach(x=>x.classList.remove('active'));li.classList.add('active');
+  imgs.forEach(i=>i.classList.toggle('on',i.dataset.k===li.dataset.k));
+  lbl.textContent=li.querySelector('h3').textContent;
+}));
+// before / after
+const r=document.getElementById('baRange'),A=document.getElementById('baA'),B=document.getElementById('baB'),bar=document.getElementById('baBar'),knob=document.getElementById('baKnob');
+function setBA(v){A.style.clipPath='inset(0 0 0 '+v+'%)';bar.style.left=v+'%';knob.style.left=v+'%'}
+r.addEventListener('input',e=>setBA(e.target.value));
+document.querySelectorAll('#baTabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#baTabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  B.src='images/ba-'+b.dataset.p+'-before.jpg';A.src='images/ba-'+b.dataset.p+'-after.jpg';r.value=50;setBA(50);
+}));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
